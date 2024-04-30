@@ -224,13 +224,11 @@ app.use((err, req, res, next) => {
 
 
 
-// MongoDB connection setup
+
 mongoose.connect('mongodb://127.0.0.1:27017/shyam', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
-
-
 
 // Define a routing-level middleware function , and profling --- third party
 const logTimestamp = (req, res, next) => {
